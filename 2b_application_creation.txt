@@ -1,0 +1,3 @@
+>>> from emotion_detection import emotion_detector
+>>> emotion_detector("I love this")
+'{"code":5, "message":"Model \'emotion_aggregated-workflow_lang_en_stockk\' not loaded", "details":[]}'
