@@ -20,18 +20,6 @@ def emotion_detector(text_to_analyse):
     # Convert the response text into a dictionary using json library
     response_dict = json.loads(response.text)
     
-    # Check if the response contains an error or if emotionPredictions is missing
-    if 'emotionPredictions' not in response_dict:
-        # Return None values for all emotions if there's an error
-        return {
-            'anger': None,
-            'disgust': None,
-            'fear': None,
-            'joy': None,
-            'sadness': None,
-            'dominant_emotion': None
-        }
-    
     # Extract the required set of emotions from the response
     emotions = response_dict['emotionPredictions'][0]['emotion']
     
